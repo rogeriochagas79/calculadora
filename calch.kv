@@ -1,0 +1,207 @@
+#:kivy 2.1.0
+<MyLayout>
+    BoxLayout:
+        orientation:"vertical"
+        size: root.width, root.height
+
+        TextInput:
+            id: calc_input
+            text: "0"
+            halign: "right"
+            font_size: 65
+            size_hint: (1, .15)
+
+        GridLayout:
+            cols: 5
+            rows:6
+
+            Button:
+                id: btn_A
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "A"
+                on_press: root.button_press('a')
+            Button:
+                id: btn_Bin
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "BIN"
+                color: 1, 0, 0
+                background_color: (255,140,0)
+                on_press: root.bin()          
+            Button:
+                id: btn_Oct
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "OCT"
+                color: 1, 0, 0
+                background_color: (255,140,0)
+                on_press: root.oct()
+            Button:
+                id: btn_Dec
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "Dec"
+                color: 1, 0, 0
+                background_color: (255,140,0)
+                
+            Button:
+                id: btn_Hex
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "HEX"
+                color: 1, 0, 0
+                background_color: (255,140,0)
+                on_press: root.hex()
+            Button:
+                id: btn_B
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "B"
+                on_press: root.button_press('b')
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "%"
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "CLEAR"           
+                on_press: root.clear()            
+            Button:
+                id: clear
+                size_hint: (.2, .2)
+                font_size: 32
+                text: u"\u00AB"
+                on_press: root.remove()
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "/"
+                on_press: root.divide()
+            Button:
+                id: btn_C
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "C"
+                on_press: root.button_press('c')
+            Button:
+                id: btn_7
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "7"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(7)
+            Button:
+                id: btn_8
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "8"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(8)
+            Button:
+                id: btn_9
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "9"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(9)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "x"
+                on_press: root.multiply()
+            Button:
+                id: btn_D
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "D"
+                on_press: root.button_press('d')
+            Button:
+                id: btn_4
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "4"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(4)
+            Button:
+                id: btn_5
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "5"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(5)
+            Button:
+                id: btn_6
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "6"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(6)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "-"
+                on_press: root.subtract()
+            Button:
+                id: btn_E
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "E"
+                on_press: root.button_press('e')
+            Button:
+                id: btn_1
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "1"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(1)
+            Button:
+                id: btn_2
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "2"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(2)
+            Button:
+                id: btn_3
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "3"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(3)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "+"
+                on_press: root.add()
+            Button:
+                id: btn_F
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "F"
+                on_press: root.button_press('f')
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "+/-"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.pos_neg()
+            Button:
+                id: btn_0
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "0"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(0)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "."
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.dot()
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "="
+                on_press: root.equals()

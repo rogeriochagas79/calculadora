@@ -1,0 +1,175 @@
+#:kivy 2.1.0
+<MyLayout>
+    BoxLayout:
+        orientation:"vertical"       
+        size: root.width, root.height
+        ActionBar: 
+            ActionView: 
+                ActionPrevious:
+                    title: 'calculadora'
+                ActionButton:
+                    text:'Binario'
+                ActionSeparator:
+                ActionButton:
+                    text:'Hexadecimal'
+                    on_release:app.root.current = 'C:\Python\calchexa.py'
+                ActionSeparator:
+                ActionButton:
+                    text:'Octal'
+                ActionSeparator:  
+                ActionButton:
+                    text:'sair'
+                    on_release:app.stop()             
+        TextInput:
+            id: calc_input
+            text: "0"
+            halign: "right"
+            font_size: 65
+            size_hint: (1, .15)
+
+        GridLayout:
+            cols: 5
+            rows:5
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "BIN"
+                color: 1, 0, 06
+                background_color: (255,140,0)
+                on_press: root.bin()
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "%"
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "C"
+                on_press: root.clear()
+
+            Button:
+                id: clear
+                size_hint: (.2, .2)
+                font_size: 32
+                text: u"\u00AB"
+                on_press: root.remove()
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "/"
+                on_press: root.divide()
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "HEX"
+                color: 1, 0, 0
+                background_color: (255,140,0)
+                on_press: root.hex()
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "7"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(7)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "8"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(8)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "9"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(9)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "x"
+                on_press: root.multiply()
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "OCT"
+                color: 1, 0, 0
+                background_color: (255,140,0)
+                on_press: root.oct()
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "4"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(4)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "5"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(5)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "6"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(6)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "-"
+                on_press: root.subtract()
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "NADS"
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "1"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(1)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "2"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(2)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "3"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(3)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "+"
+                on_press: root.add()
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "NADS"
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "+/-"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.pos_neg()
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "0"
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.button_press(0)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "."
+                background_color: (157/255, 157/255, 157/255, 1)
+                on_press: root.dot()
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "="
+                on_press: root.equals()
